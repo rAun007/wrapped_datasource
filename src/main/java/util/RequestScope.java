@@ -1,4 +1,4 @@
-package org.raunaka.database.datasource.org.raunaka.util;
+package util;
 
 import java.util.concurrent.ConcurrentHashMap;
 

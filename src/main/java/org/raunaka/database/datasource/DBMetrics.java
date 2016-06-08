@@ -3,7 +3,7 @@ package org.raunaka.database.datasource;
 import lombok.Data;
 
 import org.apache.commons.lang3.StringUtils;
-import org.raunaka.database.datasource.org.raunaka.util.RequestScope;
+import util.RequestScope;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
