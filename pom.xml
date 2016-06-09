@@ -11,6 +11,24 @@
     <artifactId>wrapped_datasource</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>Wrapped Datasource</name>
+    <description>Wrapped datasource to enable metrics and other stuff for DB Queries.</description>
+    <url>https://techpandablog.wordpress.com/</url>
+
+    <developers>
+        <developer>
+            <name>Raunak Agrawal</name>
+            <email>raunak.ratan@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
     <!-- ========================================================================== -->
     <!-- SCM DETAILS -->
     <!-- ========================================================================== -->
@@ -20,6 +38,22 @@
         <developerConnection>scm:git:https://github.com/rAun007/wrapped_datasource.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+
+    <profiles>
+        <profile>
+            <id>sonatype-oss-release</id>
+            <properties>
+                <gpg.keyname>B5375481</gpg.keyname>
+                <gpg.passphrase>ratan@1959</gpg.passphrase>
+                <gpg.defaultKeyring>false</gpg.defaultKeyring>
+                <gpg.useagent>true</gpg.useagent>
+                <gpg.lockMode>never</gpg.lockMode>
+                <gpg.homedir>/Users/raunak.agrawal/.gnupg</gpg.homedir>
+                <gpg.publicKeyring>/Users/raunak.agrawal/.gnupg/pubring.gpg</gpg.publicKeyring>
+                <gpg.secretKeyring>/Users/raunak.agrawal/.gnupg/secring.gpg</gpg.secretKeyring>
+            </properties>
+        </profile>
+    </profiles>
 
     <properties>
         <plugin.compiler.version>3.2</plugin.compiler.version>
@@ -63,6 +97,18 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
